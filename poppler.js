@@ -9,7 +9,7 @@
           enviar_ip();
       },5000);
   });
-  
+
   poppler.on('hi',function(data){
   	console.log(data);
   });
@@ -21,12 +21,13 @@
 
 function enviar_ip(){
     red = os.networkInterfaces();
-    ent = red.en0;
-    //console.log(ent);
+    console.log(red);
     ips = [];
+    /*
     ent.forEach(function(e){
         ips.push(e.family + ' = ' + e.address);
     });
+    */
     //console.log(ips);
     so = os.platform();
     //console.log(so);
