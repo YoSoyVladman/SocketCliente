@@ -1,0 +1,17 @@
+{
+  "name": "socketclient",
+  "version": "1.0.0",
+  "description": "Cliente para enviar tu IP por Socket.io",
+  "main": "poppler.js",
+  "scripts": {
+    "test": "node poppler.js"
+  },
+  "keywords": [
+    "socket"
+  ],
+  "author": "TheVladman",
+  "license": "MIT",
+  "dependencies": {
+    "socket.io-client": "^1.4.8"
+  }
+}
