@@ -1,6 +1,6 @@
   var io = require('socket.io-client');
   var os = require('os');
-  var poppler = io('http://localhost:1235');
+  var poppler = io('http://10.1.7.25:1235');
   var id = 'poppler';
 
   poppler.on('connect', function(){
@@ -25,7 +25,7 @@ function enviar_ip(){
     //console.log(ent);
     ips = [];
     ent.forEach(function(e){
-        ips.push(e.family + ' = ' + e.address + ' ');
+        ips.push(e.family + ' = ' + e.address);
     });
     //console.log(ips);
     so = os.platform();
