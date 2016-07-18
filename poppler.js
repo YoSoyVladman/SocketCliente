@@ -23,15 +23,9 @@ function enviar_ip(){
     so = os.platform();
     //console.log(so);
     red = os.networkInterfaces();
-<<<<<<< HEAD
-    ent = red.en0;
-    console.log(red);
-=======
-    //console.log(red);
     arr = Object.keys(red);
     w = arr[0];
     ent = red[w];
->>>>>>> 4a10012dfcdb234398a4f5f2b9e23fc62f65e1b6
     ips = [];
     
     ent.forEach(function(e){
