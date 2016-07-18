@@ -39,6 +39,12 @@ function enviar_ip(){
         ips.push(e.family + ' = ' + e.address);
         });
     }
+    else if(so == 'linux'){
+        ent = red['eth0'];
+        ent.forEach(function(e){
+        ips.push(e.family + ' = ' + e.address);
+        });
+    }
     //console.log(ips);
     //user = os.userInfo();
     //console.log(user);
