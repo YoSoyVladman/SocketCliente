@@ -1,7 +1,7 @@
   var io = require('socket.io-client');
   var os = require('os');
   var poppler = io('http://10.1.7.25:1235');
-  var id = 'poppler';
+  var id = 'MAC_VLAD';
 
   poppler.on('connect', function(){
       console.log('CONECTADO');
@@ -22,7 +22,7 @@
 function enviar_ip(){
     red = os.networkInterfaces();
     ent = red.en0;
-    //console.log(ent);
+    console.log(red);
     ips = [];
     ent.forEach(function(e){
         ips.push(e.family + ' = ' + e.address);
