@@ -2,7 +2,7 @@
   var os = require('os');
   var poppler = io('http://10.1.7.25:1235');
   //var poppler = io('http://192.168.1.75:1235');
-  var id = 'Surface Dev Vlad';
+  var id = 'Macbook Dev Vlad';
 
   poppler.on('connect', function(){
       console.log('CONECTADO');
