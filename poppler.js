@@ -1,13 +1,14 @@
   var io = require('socket.io-client');
   var os = require('os');
   var poppler = io('http://10.1.7.25:1235');
-  var id = 'MacMini Dev Vlad';
+  //var poppler = io('http://192.168.1.75:1235');
+  var id = 'Surface Dev Vlad';
 
   poppler.on('connect', function(){
       console.log('CONECTADO');
       setInterval(function(){
           enviar_ip();
-      },20000);
+      },5000);
   });
 
   poppler.on('hi',function(data){
@@ -30,25 +31,28 @@ function enviar_ip(){
         w = arr[0];
         ent = red[w];
         ent.forEach(function(e){
-        ips.push(e.family + ' = ' + e.address);
+        ips.push(e.address);
         });
     }
     else if(so == 'darwin'){
         ent = red['en0'];
         ent.forEach(function(e){
-        ips.push(e.family + ' = ' + e.address);
+        ips.push(e.address);
         });
     }
     else if(so == 'linux'){
         ent = red['eth0'];
         ent.forEach(function(e){
-        ips.push(e.family + ' = ' + e.address);
+        ips.push(e.address);
         });
     }
     //console.log(ips);
     //user = os.userInfo();
     //console.log(user);
-    mensaje  = 'Soy ' + id + ',  mi OS es '+ so + ' y mi IP es ' + ips;
+    mensaje = [];
+    mensaje.push(id);
+    mensaje.push(so);
+    mensaje.push(ips);
     //console.log(mensaje);
     poppler.emit('my_ip',mensaje);
 }
