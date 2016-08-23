@@ -1,8 +1,8 @@
   var io = require('socket.io-client');
   var os = require('os');
-  var poppler = io('http://10.1.7.25:1235');
+  var poppler = io('http://172.1.1.201:1235');
   //var poppler = io('http://192.168.1.75:1235');
-  var id = 'Macbook Dev Vlad';
+  var id = 'SumaPuntos4';
 
   poppler.on('connect', function(){
       console.log('CONECTADO');
